@@ -17,7 +17,7 @@ Archives the publicly published legal/policy text of **Origin Energy Limited**, 
 
 - `facts.edn` — verified public-registry facts about this entity, each value
   carrying the URL it was read from and when. Generated; see below.
-- `scripts/verify-facts.cljs` — re-fetches every URL `facts.edn` cites and
+- `scripts/verify-facts.cljk` — re-fetches every URL `facts.edn` cites and
   fails if the live registry no longer says what is recorded here.
 - `80-data/public/tos.journal.edn` — EDN quad-log of the archived legal text.
 - `NOTICE` — copyright/attribution statement.
@@ -41,8 +41,8 @@ Check it against the live registry — a bare `git clone` is enough, no workspac
 and no dependency resolution:
 
 ```bash
-nbb scripts/verify-facts.cljs           # check
-nbb scripts/verify-facts.cljs --write   # re-fetch and rewrite facts.edn
+nbb scripts/verify-facts.cljk           # check
+nbb scripts/verify-facts.cljk --write   # re-fetch and rewrite facts.edn
 ```
 
 The exit codes are three rather than two, because a check that could not run
