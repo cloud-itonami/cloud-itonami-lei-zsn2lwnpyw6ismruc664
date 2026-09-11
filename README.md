@@ -41,8 +41,8 @@ Check it against the live registry — a bare `git clone` is enough, no workspac
 and no dependency resolution:
 
 ```bash
-nbb scripts/verify-facts.cljk           # check
-nbb scripts/verify-facts.cljk --write   # re-fetch and rewrite facts.edn
+kbb --backend sci scripts/verify-facts.cljk           # check
+kbb --backend sci scripts/verify-facts.cljk --write   # re-fetch and rewrite facts.edn
 ```
 
 The exit codes are three rather than two, because a check that could not run
